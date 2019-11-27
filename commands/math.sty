@@ -1,0 +1,24 @@
+%%
+%% Math Macros:
+%%
+
+%% Physics Objects:
+\newcommand{\mvec}[1]{\vec{#1}}
+\newcommand{\mmat}[1]{\mathbf{#1}}
+\newcommand{\force}[1]{\mvec{F}_\mathrm{#1}}
+
+%% Analysis:
+\newcommand{\feval}[2]{\left.{#1}\right]_{#2}}
+\newcommand{\difft}[1]{\mathrm{d}{#1}}
+\newcommand{\diff}[2]{\frac{\difft{#1}}{\difft{#2}}}
+\newcommand{\diffn}[3]{\frac{\mathrm{d}^{#3}{#1}}{\difft{#2}^{#3}}}
+\newcommand{\diffp}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\diffpn}[3]{\frac{\partial^{#3}{#1}}{\partial{#2}^{#3}}}
+\newcommand{\const}[2]{\left({#1}\right)_{#2}}
+\newcommand{\D}[2]{\Delta_{\mathrm{#1}}{#2}}
+
+%% Statistics:
+\newcommand{\Mean}[1]{\mathrm{E}\left[#1\right]}
+\newcommand{\Var}[1]{\mathrm{V}\left[#1\right]}
+\newcommand{\Cov}[2]{\mathrm{Cov}\left[#1,#2\right]}
+\newcommand{\SSE}{\mathrm{SSE}}

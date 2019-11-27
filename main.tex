@@ -1,0 +1,114 @@
+\documentclass[a4paper,10pt]{article}
+
+% Language:
+%\usepackage[utf8]{inputenc}
+%\usepackage[francais]{babel}
+%\usepackage[style=french]{csquotes}
+%\usepackage[T1]{fontenc}
+
+% Typography:
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[inline]{enumitem}
+\setlist*[enumerate]{label=(\arabic*)}
+\usepackage{tocvsec2}
+\usepackage{braket}
+
+% Scientific Packages:
+\usepackage[version=3]{mhchem}
+\usepackage{siunitx}
+
+% Layout:
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+
+% Figures:
+\usepackage[dvips]{graphicx}
+
+% PDF Incrustation (after graphicx to avoid clash)
+%\usepackage{pdfpages}
+
+% Layout (cont'd):
+%\usepackage{wrapfig}
+%\usepackage{lscape}
+%\usepackage{rotating}
+%\usepackage{epstopdf}
+
+% Bibliography:
+\usepackage[backend=bibtex,style=numeric]{biblatex}
+\addbibresource{./references/books.bib}
+\addbibresource{./references/articles.bib}
+\addbibresource{./references/web.bib}
+
+% Hypertext References:
+\usepackage{hyperref}
+\hypersetup{
+    unicode=false,
+    pdftoolbar=true,
+    pdfmenubar=true,
+    pdffitwindow=false,
+    pdfstartview={FitH},
+    pdftitle={Title},
+    pdfauthor={J. Landercy},
+    pdfnewwindow=true,
+    colorlinks=true,
+    linkcolor=red,
+    citecolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan
+}
+
+% User-defined Packages:
+\usepackage{./commands/math}
+\usepackage{./commands/units}
+\usepackage{./commands/references}
+
+% Document Metadata:
+\title{Title}
+\author{J. Landercy}
+
+% Document Body:
+\begin{document}
+
+% Title:
+\maketitle
+
+% Abstract:
+\begin{abstract}
+\end{abstract}
+%\medskip
+
+% Table Of Contents:
+\tableofcontents
+\clearpage
+
+% Array Row Height
+\renewcommand{\arraystretch}{1.25}
+
+% Sections:
+\settocdepth{subsection}
+\input{./sections/section01.tex}  % Introduction
+\input{./sections/section02.tex}  % x
+\input{./sections/section03.tex}  % x
+\clearpage
+
+\settocdepth{section}
+\input{./sections/section20.tex}  % Conclusions
+\clearpage
+
+%\input{./sections/section30.tex}  % Applications numériques & réflexions
+%\clearpage
+
+% Bibliography:
+\printbibliography
+\clearpage
+
+% Appendix:
+%\appendix
+%\input{./sections/section90.tex}  % Appendix
+
+\end{document}

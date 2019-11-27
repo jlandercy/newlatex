@@ -1,0 +1,20 @@
+%%
+%% Reference Macros:
+%%
+
+%% Inline Short Citation:
+\newcommand{\citeeqn}[1]{équation~\ref{#1}}
+\newcommand{\citetab}[1]{\textsc{Table}~\ref{#1}}
+\newcommand{\citefig}[1]{\textsc{Figure}~\ref{#1}}
+
+%% Inline Citation w/ Page Number:
+\newcommand{\citepeqn}[1]{\citeeqn{#1} (page~\pageref{#1})}
+\newcommand{\citeptab}[1]{\citetab{#1} (page~\pageref{#1})}
+\newcommand{\citepfig}[1]{\citefig{#1} (page~\pageref{#1})}
+
+%% Parenthesis Citation w/ confer:
+\newcommand{\cfeqn}[1]{\textit{cf.} \citeeqn{#1}, page~\pageref{#1}}
+\newcommand{\cftab}[1]{\textit{cf.} \citetab{#1}, page~\pageref{#1}}
+\newcommand{\cffig}[1]{\textit{cf.} \citefig{#1}, page~\pageref{#1}}
+
+
